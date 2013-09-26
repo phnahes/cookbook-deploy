@@ -1,4 +1,4 @@
-deploy Cookbook
+Cookbook - Deploy
 ==================
 Cookbook used to deploy applications using version on DataBags
 

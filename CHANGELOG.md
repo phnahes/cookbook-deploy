@@ -13,5 +13,5 @@ This file is used to list changes made in each version of the deploy cookbook.
 
 0.1.0
 -----
-- [Paulo Nahes] - Initial release of r7-deploy
+- [Paulo Nahes] - Initial release of deploy
 
