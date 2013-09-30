@@ -1,4 +1,4 @@
-Cookbook - Deploy
+deploy Cookbook
 ==================
 Cookbook used to deploy applications using version on DataBags
 
@@ -25,7 +25,7 @@ Usage
 -----
 #### Cookbook "deploy::default"
 
-Just include `deploy` in your node's `run_list` and override the attributes for each project:
+Just include `deploy` in your node's `run_list` and override the attributes for each project. The attribute `pkgList` determine the packages that will be searched and installed.
 
 ```json
 override_attributes(
