@@ -21,7 +21,11 @@ action :deploy do
 		ignore_failure true
 	end
 
-	execute "service #{pkg_service} #{pkg_doit}"
+	if defined? pkg_service
+		if not pkg_service.empty?
+			execute "service #{pkg_service} #{pkg_doit}"
+		end
+	end
 end
 
 action :nothing do 

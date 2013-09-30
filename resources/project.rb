@@ -9,5 +9,5 @@ default_action :nothing
 
 attribute :package, :name_attribute => true, :kind_of => String, :required => true
 attribute :version, :kind_of => String, :required => true
-attribute :service, :kind_of => String, :required => true
-attribute :doit, :kind_of => String, :required => true
+attribute :service, :kind_of => String
+attribute :doit, :kind_of => String
