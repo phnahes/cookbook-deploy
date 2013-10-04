@@ -3,6 +3,11 @@ deploy CHANGELOG
 
 This file is used to list changes made in each version of the deploy cookbook.
 
+0.1.3
+-----
+- [Paulo Nahes] - Rewrited Cookbook, removed Providers, simplified without it.
+
+
 0.1.2
 -----
 - [Paulo Nahes] - Rewrited Cookbook using Resources and Providers to simplify the work 
