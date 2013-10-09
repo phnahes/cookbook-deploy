@@ -30,19 +30,25 @@ pkgList.each do |packageName|
 		if defined? pkg_version
 			if not pkg_version.empty?
 
-				pkg_service_name 	= pkgLoop["service"]["name"]
-				pkg_service_action 	= pkgLoop["service"]["action"]
+				ruby_block "queueService" do
+					block do
+						pkg_service_name 	= pkgLoop["service"]["name"]
+						pkg_service_action 	= pkgLoop["service"]["action"]
 
-	                        if defined? pkg_service_name
-	                                if not pkg_service_name.empty?
-						hash.merge! pkg_service_name => pkg_service_action
+						if defined? pkg_service_name
+							if not pkg_service_name.empty?
+								hash.merge! pkg_service_name => pkg_service_action
+							end
+						end
 					end
-				end
+					action :nothing
+				end				
 
-				log "Installing: #{pkg_name}"
 				package "#{pkg_name}" do
 					version "#{pkg_version}"
+					options "--force-yes"
 					ignore_failure true
+					notifies :create, "ruby_block[queueService]", :immediately
 				end
 
 			end
@@ -53,3 +59,4 @@ end
 hash.each do |srv,act|
 	execute "#{cmd} #{srv} #{act}"
 end
+
