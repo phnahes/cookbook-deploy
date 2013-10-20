@@ -9,18 +9,6 @@ Require be called on Role and override attribute `node[:deploy]["bag"]` and `nod
 Attributes
 ----------
 
-#### deploy::default
-<table>
-  <tr>
-    <th>bag</th>
-  </tr>
-  <tr>
-    <td><tt>[:deploy]["bag"]</tt></td>
-    <td>String</td>
-    <td>Name of Bag</td>
-  </tr>
-</table>
-
 Usage
 -----
 #### Cookbook "deploy::default"
