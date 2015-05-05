@@ -31,9 +31,10 @@ Just include `deploy` in your node's `run_list` and override the attributes for 
 override_attributes(
 
   "deploy" => {
-    "bag" => "bag_name",
-    "pkgList" => [ "package1", "package2" ]
-  }
+    "install" => {
+      "data_bag" => [ "data_bag_item1", "data_bag_item2" ]
+    }
+  },
 
 )
 
